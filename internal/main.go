@@ -33,7 +33,7 @@ func RunSwitchProxy(proxys map[string]interface{}, conf config.Terminal) error {
 	if err != nil {
 		return err
 	}
-	log.Println("listern", l.Addr().String())
+	log.Println("listen", l.Addr().String())
 	tr := &http.Transport{
 		Dial: (&net.Dialer{
 			Timeout:   60 * time.Second,
